@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Country";
+    var index = 1;
+}
+@using Second.DataAccess.Entities;
+@model IList<Country>
+<div>
+    <h1>Country</h1>
+
+    <table border="1">
+        <tr>
+            <th>Index</th>
+            <th>@Html.DisplayNameFor(model => model.First().CountryId)</th>
+            <th>@Html.DisplayNameFor(model => model.First().CountryName)</th>
+            <th>@Html.DisplayNameFor(model => model.First().RegionId)</th>
+        </tr>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@index</td>
+                <td>@c.CountryId</td>
+                <td>@c.CountryName</td>
+                <td>@c.RegionId</td>
+            </tr>
+            index += 1;
+        }
+    </table>
+</div>

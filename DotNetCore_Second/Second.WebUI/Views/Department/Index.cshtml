@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Department";
+    var index = 1;
+}
+@using Second.Model;
+@model IList<DepartmentInfo>
+
+@section Styles{
+    <link href="~/lib/DataTables/datatables.min.css" rel="stylesheet" />
+}
+<div>
+    <h1>Department</h1>
+
+    <table border="1" id="department-list" class="table">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>@Html.DisplayNameFor(model => model.First().DepartmentId)</th>
+                <th>@Html.DisplayNameFor(model => model.First().DepartmentName)</th>
+                <th>@Html.DisplayNameFor(model => model.First().StreetAddress)</th>
+                <th>@Html.DisplayNameFor(model => model.First().PostalCode)</th>
+                <th>@Html.DisplayNameFor(model => model.First().City)</th>
+                <th>@Html.DisplayNameFor(model => model.First().StateProvince)</th>
+                <th>@Html.DisplayNameFor(model => model.First().CountryName)</th>
+                <th>@Html.DisplayNameFor(model => model.First().RegionName)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td>@index</td>
+                    <td>@c.DepartmentId</td>
+                    <td>@c.DepartmentName</td>
+                    <td>@c.StreetAddress</td>
+                    <td>@c.PostalCode</td>
+                    <td>@c.City</td>
+                    <td>@c.StateProvince</td>
+                    <td>@c.CountryName</td>
+                    <td>@c.RegionName</td>
+                </tr>
+                index += 1;
+            }
+        </tbody>
+    </table>
+</div>
+@section Scripts{
+    <script src="~/lib/DataTables/DataTables-1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#department-list').DataTable({
+                "language": {
+                    infoEmpty: '<p>error</p>',
+                    "search": "Search by:",
+                    "info":"_START_ - _END_ of _TOTAL_",
+                },
+                "bPaginate": true,
+                "columnDefs": [
+                    { "searchable": false, "targets": [0, 1, 4]},
+                ],
+                "bScrollCollapse": true,
+            });
+
+        });
+    </script>
+}

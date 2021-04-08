@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  sql_db:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      - sql
+    container_name: sql_db
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=sa12345!
+    volumes:
+     - database:/var/opt/mssql
+  sql_database_creator:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      - sql
+    command: bash -c "echo sleep wait a bit till the db is up and running before attempting to create the Allready DB && sleep 7 && /opt/mssql-tools/bin/sqlcmd -S sql_db,1433 -U sa -P sa12345! -Q 'create database AllReady'"
+    depends_on:
+     - sql_db
+  app:
+    build: .
+    networks:
+     - sql
+    environment:
+     - DATA__DefaultConnection__ConnectionString=Server=sql_db;Database=AllReady;User=sa;Password=sa12345!
+     - DATA__HangfireConnection__ConnectionString=Server=sql_db;Database=AllReady;User=sa;Password=sa12345!
+    restart: on-failure
+    depends_on:
+     - sql_db
+     - sql_database_creator
+    ports:
+     - 8080:80
+networks:
+  sql:
+volumes:
+  database:

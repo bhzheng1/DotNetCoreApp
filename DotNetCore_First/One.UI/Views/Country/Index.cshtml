@@ -1,0 +1,17 @@
+@model IEnumerable<One.Domain.Models.CountryReadModel>
+
+<h1>@ViewData["Title"]</h1>
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Region</th>
+    </tr>
+    @foreach (var c in Model) {
+        <tr>
+            <td>@c.CountryId</td>
+            <td>@c.CountryName</td>
+            <td>@c.RegionId</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,57 @@
+﻿@*
+    build-in htmlhelper
+*@
+@model ModelClassLibrary.Product
+
+<div>
+    @Html.ActionLink("Hyperlink 01", "TargetAction")<br />
+    @Html.ActionLink("Hyperlink 02", "TargetAction", new { id = Model.ID })<br />
+    @Html.ActionLink("Hyperlink 03", "TargetAction", new { name = Model.Name })<br />
+    @Html.ActionLink("Hyperlink 04", "TargetAction", "TargetController", new { id = Model.ID }, new { style = "color:red" })<br />
+</div>
+<hr />
+<div>
+    @using (Html.BeginForm("TargetAction", "TargetController"))
+    {
+        <input type="text" name="id" value="@Model.ID" /><br />
+        <input type="text" name="name" value="@Model.Name" /><br />
+        <input type="text" name="price" value="@Model.Price" /><br />
+        <input type="submit" value="Submit" /><br />
+    }
+</div>
+<hr />
+<div>
+    @using (Html.BeginForm("TargetAction", "TargetController"))
+    {
+        @Html.Hidden("id", Model.ID)<br />
+        @Html.TextBox("name", Model.Name)<br />
+        @Html.TextBox("price", Model.Price)<br />
+        <input type="submit" value="Submit" /><br />
+    }
+</div>
+<hr />
+<div>
+    @using (Html.BeginForm("TargetAction", "TargetController"))
+    {
+        @Html.HiddenFor(a => a.ID, Model.ID)<br />
+        @Html.Label("Name", "Name")
+        @Html.TextBoxFor(a => a.Name, Model.Name)<br />
+
+        @Html.LabelFor(a => a.Price)
+        @Html.TextBoxFor(a => a.Price, Model.Price)<br />
+        <input type="submit" value="Submit" /><br />
+    }
+</div>
+<hr />
+<div>
+    @using (Html.BeginForm("TargetAction", "TargetController", "post"))
+    {
+        @Html.TextBox("User", "MerrickZheng")<br />
+        @Html.Password("Password", "123456")<br />
+
+        @Html.TextArea("Description", Model.Description)<br />
+        @Html.TextAreaFor(x => x.Description, Model.Description)<br />
+        <input type="submit" value="Login" /><br />
+    }
+</div>
+<hr />

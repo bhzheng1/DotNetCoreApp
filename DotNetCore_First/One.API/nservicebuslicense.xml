@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license type="Commercial" DeploymentType="SaaS/Internal Use" Quantity="4" Edition="Enterprise" Applications="All" RenewalType="Subscription" expiration="2020-03-20" Notes="BlueSnap" id="3aac2266-5739-4606-8584-abe88a1fdb43">
+  <name>HelloWorld</name>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>ftCSxiyv8m+Hh3Kh2rtmL970f+U=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>k3abGxyxZbmMwF8VUoRh4RPLlSd27BPQ+aytSjzfmtVw7HbXdyhKhijGMCc5gdMYktJDUMV4nn5huo86PUtGoQxvpXKIfHPA0AHcLbZ+hiOMB+a1FQ1/Nxj2tUzP4AWOEqX2A7zQ6H30iTY9xUhvDpA7e0BK9nxqv2mt079PL30=</SignatureValue>
+  </Signature>
+</license>

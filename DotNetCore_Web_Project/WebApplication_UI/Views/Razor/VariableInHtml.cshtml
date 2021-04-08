@@ -1,0 +1,35 @@
+﻿@using ModelClassLibrary;
+@model IEnumerable<Student>;
+
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tfoot></tfoot>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="page-break-inside: avoid; background-color:@(item.StudentId%2==0?"#f0f0f0":"#ffffff");">
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

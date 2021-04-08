@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+@model System.Collections.Generic.List<ModelClassLibrary.Transformer>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in Model)
+            {
+                <tr>
+                    <td>@t.ID</td>
+                    <td>@t.Name</td>
+                    <td>@t.Location.ToUpper()</td>
+                    <td><div style="width:24px;height:24px;background:@t.Color" /></td>
+                </tr>
+            }
+        </tbody>
+    </table>
