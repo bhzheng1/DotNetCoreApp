@@ -1,0 +1,116 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "SakilaContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "sakila",
+   "ProceduresReturnList": false,
+   "ProjectRootNamespace": "Second.DataAccess",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[actor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[address]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[city]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[country]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[customer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[film]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[film_actor]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[film_category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[film_text]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[inventory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[language]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[payment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[rental]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[staff]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[store]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[customer_list]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[film_list]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[sales_by_film_category]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[sales_by_store]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[staff_list]",
+         "ObjectType": 3
+      }
+   ],
+   "UiHint": "ca787ceb115a.sakila",
+   "UseBoolPropertiesWithoutDefaultSql": true,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSpatial": false
+}

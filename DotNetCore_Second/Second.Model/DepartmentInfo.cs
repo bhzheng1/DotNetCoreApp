@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Second.Model
 {
@@ -6,6 +7,7 @@ namespace Second.Model
     public class DepartmentInfo
     {
         public int DepartmentId { get; set; }
+        [DisplayName("Department Name")]
         public string DepartmentName { get; set; }
 
         public int LocationId { get; set; }

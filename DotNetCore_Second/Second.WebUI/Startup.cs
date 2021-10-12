@@ -6,6 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Second.DataAccess;
 using Second.DataAccess.Repositories;
+using Second.DataAccess.sakila;
+using Second.Model;
+using Second.WebUI.Utils;
+using System;
+using System.IO;
 
 namespace Second.WebUI
 {
@@ -15,6 +20,16 @@ namespace Second.WebUI
         {
             Configuration = configuration;
             Env = env;
+            //C:\Code\DotNetCore_Project\DotNetCore_Second\Second.WebUI
+            var contentRoot1 = env.ContentRootPath;
+            //C:\Code\DotNetCore_Project\DotNetCore_Second\Second.WebUI
+            var contentRoot2 = configuration.GetValue<string>(WebHostDefaults.ContentRootKey);
+            //C:\Code\DotNetCore_Project\DotNetCore_Second\Second.WebUI\bin\Debug\net5.0\
+            var contentRoot3 = AppContext.BaseDirectory;
+            //C:\Code\DotNetCore_Project\DotNetCore_Second\Second.WebUI\bin\Debug\net5.0\
+            var contentRoot4 = AppDomain.CurrentDomain.BaseDirectory;
+
+            IronPdf.Installation.TempFolderPath = Path.Combine(AppContext.BaseDirectory,"IronPdfTemp");
         }
 
         public IConfiguration Configuration { get; }
@@ -31,13 +46,25 @@ namespace Second.WebUI
             }
 #endif
             var defaultDb = Configuration.GetConnectionString("ApplicationDb");
+            var sakila = Configuration.GetConnectionString("sakila");
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(_ => _.UseSqlServer(defaultDb));
-            services.AddSingleton(Configuration);
+
+            //enable lazy loading
+            services.AddDbContext<SakilaContext>(_ => _.UseLazyLoadingProxies().UseSqlServer(sakila));
+            services.AddSingleton(s => Configuration);
+            services.AddSingleton(s => new DbConfiguration
+            {
+                ApplicationDbConn = defaultDb,
+                SakilaConn = sakila
+            });
             services.AddTransient<RepositoryContext>();
             services.AddTransient<ICountryRepository, CountryRepository>();
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddScoped<IViewRenderService, ViewRenderService>();
             services.AddDistributedMemoryCache();
+
+            services.AddApplicationInsightsTelemetry();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +72,7 @@ namespace Second.WebUI
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();                
+                app.UseDeveloperExceptionPage();
             }
             else
             {

@@ -10,6 +10,13 @@ namespace Second.DataAccess
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
+        public ApplicationDbContext(string conn):base()
+        {
+
+        }
+        private static DbContextOptions GetDbContextOptions(string connectionString) {
+            return SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder(), connectionString).Options;
+        }
 
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
