@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30413.136
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{40E8964C-9872-4F31-955F-B170CEE794D7}"
 EndProject
@@ -16,8 +16,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_UI", "WebApplication_UI\WebApplication_UI.csproj", "{D0AAA6C9-CB3D-453E-99F8-61C0FA029BCF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelperClassLibrary", "HelperClassLibrary\HelperClassLibrary.csproj", "{4502095D-3BC8-458B-A17C-9C80E6EE754C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIClientClassLibrary", "APIClientClassLibrary\APIClientClassLibrary.csproj", "{328FEB26-1797-4006-86E3-F99C2BD2091A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbMigrations", "DbMigrations\DbMigrations.csproj", "{CB79AF96-587E-4319-B479-DE90F05DE9B0}"
 EndProject
@@ -65,10 +63,6 @@ Global
 		{4502095D-3BC8-458B-A17C-9C80E6EE754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4502095D-3BC8-458B-A17C-9C80E6EE754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4502095D-3BC8-458B-A17C-9C80E6EE754C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{328FEB26-1797-4006-86E3-F99C2BD2091A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{328FEB26-1797-4006-86E3-F99C2BD2091A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{328FEB26-1797-4006-86E3-F99C2BD2091A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{328FEB26-1797-4006-86E3-F99C2BD2091A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB79AF96-587E-4319-B479-DE90F05DE9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB79AF96-587E-4319-B479-DE90F05DE9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB79AF96-587E-4319-B479-DE90F05DE9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU

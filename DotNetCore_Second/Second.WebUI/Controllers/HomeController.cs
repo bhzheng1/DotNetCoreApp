@@ -45,7 +45,7 @@ namespace Second.WebUI.Controllers
                     Iso = Convert.ToInt32(_.Attributes["iso"].Value)
                 });
             }
-            var sortedCountries = countries.OrderBy(_=>_.Continent).ThenBy(_ => _.Iso).ToList();
+            var sortedCountries = countries.OrderBy(_ => _.Continent).ThenBy(_ => _.Iso).ToList();
             return View(sortedCountries);
         }
 
@@ -54,7 +54,8 @@ namespace Second.WebUI.Controllers
             return View();
         }
 
-        public PartialViewResult GetModalSample() {
+        public PartialViewResult GetModalSample()
+        {
             return PartialView("_ModalSample");
         }
 
@@ -70,11 +71,13 @@ namespace Second.WebUI.Controllers
             var departments = _departmentRepository.GetDepartmentInfos();
             return PartialView("_ModalSampleWithTable2", departments);
         }
-        public IActionResult Nothing() {
+        public IActionResult Nothing()
+        {
             return Content("Nothing");
         }
 
-        public PartialViewResult ModalError() {
+        public PartialViewResult ModalError()
+        {
             return PartialView("_ModalError");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

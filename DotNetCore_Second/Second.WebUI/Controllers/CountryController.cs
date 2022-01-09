@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Second.DataAccess.Repositories;
+using System.Threading.Tasks;
 
 namespace Second.WebUI.Controllers
 {
@@ -14,6 +15,11 @@ namespace Second.WebUI.Controllers
         {
             var countries = _countryRepository.GetCountries();
             return View(countries);
+        }
+
+        public async Task<IActionResult> GetAllCountries() 
+        { 
+            return Json(await _countryRepository.GetAllCountries());
         }
     }
 }

@@ -6,6 +6,6 @@ namespace Second.WebUI.Models
     public class Constants
     {
         public readonly string Title = "Hello World!";
-        public readonly int Year = 2021;       
+        public readonly int Year = 2021;
     }
 }

@@ -5,9 +5,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Second.DataAccess;
+using Second.DataAccess.ApplicationDb;
 using Second.DataAccess.Repositories;
 using Second.DataAccess.sakila;
 using Second.Model;
+using Second.Scheduler;
+using Second.Services;
 using Second.WebUI.Utils;
 using System;
 using System.IO;
@@ -29,7 +32,7 @@ namespace Second.WebUI
             //C:\Code\DotNetCore_Project\DotNetCore_Second\Second.WebUI\bin\Debug\net5.0\
             var contentRoot4 = AppDomain.CurrentDomain.BaseDirectory;
 
-            IronPdf.Installation.TempFolderPath = Path.Combine(AppContext.BaseDirectory,"IronPdfTemp");
+            IronPdf.Installation.TempFolderPath = Path.Combine(AppContext.BaseDirectory, "IronPdfTemp");
         }
 
         public IConfiguration Configuration { get; }
@@ -52,8 +55,8 @@ namespace Second.WebUI
 
             //enable lazy loading
             services.AddDbContext<SakilaContext>(_ => _.UseLazyLoadingProxies().UseSqlServer(sakila));
-            services.AddSingleton(s => Configuration);
-            services.AddSingleton(s => new DbConfiguration
+            services.AddSingleton<IConfiguration>(s => Configuration);
+            services.AddSingleton<DbConfiguration>(s => new DbConfiguration
             {
                 ApplicationDbConn = defaultDb,
                 SakilaConn = sakila
@@ -61,14 +64,17 @@ namespace Second.WebUI
             services.AddTransient<RepositoryContext>();
             services.AddTransient<ICountryRepository, CountryRepository>();
             services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddTransient<IJobRepository,JobRepository>();
             services.AddScoped<IViewRenderService, ViewRenderService>();
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IHorseService, HorseService>();
             services.AddDistributedMemoryCache();
-
+            services.AddSingleton<MyRegistry>();
             services.AddApplicationInsightsTelemetry();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime appLifetime)
         {
             if (env.IsDevelopment())
             {
@@ -93,6 +99,9 @@ namespace Second.WebUI
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            var registry = app.ApplicationServices.GetRequiredService<MyRegistry>();
+            JobManager.Initialize(registry);
+            appLifetime.ApplicationStopping.Register(JobManager.StopAndBlock);
         }
     }
 }

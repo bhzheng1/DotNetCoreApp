@@ -1,4 +1,5 @@
-﻿using Second.Model;
+﻿using Second.DataAccess.ApplicationDb;
+using Second.Model;
 using System.Collections.Generic;
 using System.Linq;
 

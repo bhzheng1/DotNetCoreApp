@@ -1,0 +1,489 @@
+2021-12-15 00:04:37.859 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 00:04:54.155 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 00:04:54.157 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 00:04:54.158 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 00:04:54.159 -05:00 [INF] Hosting environment: Development
+2021-12-15 00:04:54.160 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 00:04:55.115 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 00:04:55.272 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 00:04:55.350 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 00:04:56.190 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 00:04:56.198 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6124ms.
+2021-12-15 00:05:13.638 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 00:05:15.020 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 19660.3051ms
+2021-12-15 00:05:15.027 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 00:05:15.035 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The path is empty. (Parameter 'path')
+   at System.IO.Path.GetFullPath(String path)
+   at System.Diagnostics.FileVersionInfo.GetVersionInfo(String fileName)
+   at AspNetCore.Views_Shared__Layout.ExecuteAsync() in C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI\Views\Shared\_Layout.cshtml:line 9
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-12-15 00:05:15.280 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 500 - text/html;+charset=utf-8 20217.3279ms
+2021-12-15 00:05:15.297 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 00:05:15.309 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 12.1518ms
+2021-12-15 00:12:32.371 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 00:12:33.762 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 00:12:33.764 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 00:12:33.766 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 00:12:33.767 -05:00 [INF] Hosting environment: Development
+2021-12-15 00:12:33.768 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 00:12:34.632 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 00:12:34.854 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 00:12:34.950 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 00:12:35.294 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 00:12:35.302 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.5916ms.
+2021-12-15 00:12:40.045 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 00:21:16.983 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 00:21:18.319 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 00:21:18.323 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 00:21:18.378 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 00:21:18.381 -05:00 [INF] Hosting environment: Development
+2021-12-15 00:21:18.383 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 00:21:19.338 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 00:21:19.518 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 00:21:19.561 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 00:21:19.861 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 00:21:19.870 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8101ms.
+2021-12-15 00:21:24.673 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 00:22:00.366 -05:00 [INF] Executed ViewResult - view Index executed in 40484.389ms.
+2021-12-15 00:22:00.376 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 40810.161ms
+2021-12-15 00:22:00.390 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 00:22:00.419 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 41130.7318ms
+2021-12-15 00:22:00.438 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 00:22:00.438 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 00:22:00.445 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 00:22:00.451 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 13.0523ms
+2021-12-15 00:22:00.454 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 00:22:00.573 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 00:22:00.617 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 11.7222ms.
+2021-12-15 00:22:00.628 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 00:22:00.631 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 163.5452ms
+2021-12-15 00:22:00.635 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 00:22:00.637 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 199.6139ms
+2021-12-15 14:35:14.884 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 15:10:10.346 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 15:10:12.125 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:10:12.140 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 15:10:12.188 -05:00 [INF] CountDown: 3
+2021-12-15 15:11:43.672 -05:00 [INF] Countdown: 2
+2021-12-15 15:11:43.689 -05:00 [INF] Countdown: 1
+2021-12-15 15:11:43.717 -05:00 [INF] Countdown: live!
+2021-12-15 15:11:43.745 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 15:36:13.241 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 15:43:57.526 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 15:43:59.763 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 15:43:59.981 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 15:43:59.981 -05:00 [INF] CountDown: 3
+2021-12-15 15:43:59.989 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:44:00.014 -05:00 [INF] Countdown: 2
+2021-12-15 15:44:05.571 -05:00 [INF] Countdown: 1
+2021-12-15 15:44:05.595 -05:00 [INF] Countdown: live!
+2021-12-15 15:44:05.597 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 15:44:05.625 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 15:44:05.996 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 15:44:05.998 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 15:44:06.006 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 15:44:06.008 -05:00 [INF] Hosting environment: Development
+2021-12-15 15:44:06.010 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 15:44:06.917 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 15:44:06.986 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 15:44:07.022 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 15:44:07.159 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 15:44:07.169 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9024ms.
+2021-12-15 15:44:09.946 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 15:44:09.946 -05:00 [INF] Disposable: executing
+2021-12-15 15:44:09.951 -05:00 [INF] Disposable: disposed
+2021-12-15 15:44:21.599 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 15:44:22.695 -05:00 [INF] Executed ViewResult - view Index executed in 15513.5456ms.
+2021-12-15 15:44:22.706 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 15678.1826ms
+2021-12-15 15:44:22.711 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 15:44:22.817 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 15926.5965ms
+2021-12-15 15:44:22.842 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 15:44:22.842 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 15:44:22.877 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 15:44:22.882 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 40.4430ms
+2021-12-15 15:44:22.884 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 15:44:22.972 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 15:44:22.980 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 6.5174ms.
+2021-12-15 15:44:22.985 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 15:44:22.987 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 54.182ms
+2021-12-15 15:44:22.989 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 15:44:22.990 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 148.6909ms
+2021-12-15 15:44:59.946 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:45:06.325 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 15:45:59.948 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:45:59.948 -05:00 [INF] SOMETHING WENT WRONG
+2021-12-15 15:46:07.026 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 15:49:25.154 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 15:49:27.195 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 15:49:27.324 -05:00 [INF] CountDown: 3
+2021-12-15 15:49:27.353 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:49:27.355 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 15:49:27.355 -05:00 [INF] Countdown: 2
+2021-12-15 15:49:57.919 -05:00 [INF] Countdown: 1
+2021-12-15 15:50:00.992 -05:00 [INF] Countdown: live!
+2021-12-15 15:50:02.414 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 15:50:02.475 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 15:50:03.469 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 15:50:06.726 -05:00 [INF] Disposable: executing
+2021-12-15 15:50:07.401 -05:00 [INF] Disposable: disposed
+2021-12-15 15:50:38.235 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:55:11.103 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 15:55:13.094 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 15:55:13.190 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 15:55:13.190 -05:00 [INF] CountDown: 3
+2021-12-15 15:55:13.190 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 15:55:18.804 -05:00 [INF] Countdown: 2
+2021-12-15 15:55:18.832 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 15:55:18.844 -05:00 [INF] Countdown: 1
+2021-12-15 15:55:20.817 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 15:55:20.818 -05:00 [INF] Countdown: live!
+2021-12-15 15:55:23.454 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 16:03:43.657 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 16:03:45.691 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 16:03:45.779 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 16:03:45.785 -05:00 [INF] CountDown: 3
+2021-12-15 16:03:45.794 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 16:03:45.815 -05:00 [INF] Countdown: 2
+2021-12-15 16:03:45.834 -05:00 [INF] Countdown: 1
+2021-12-15 16:03:54.976 -05:00 [INF] Countdown: live!
+2021-12-15 16:03:54.976 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 16:03:55.002 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 16:05:07.923 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 16:05:07.928 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 16:05:07.923 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 16:05:07.999 -05:00 [INF] Disposable: executing
+2021-12-15 16:05:08.028 -05:00 [INF] Disposable: disposed
+2021-12-15 16:10:39.737 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 16:10:41.873 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 16:10:41.986 -05:00 [INF] CountDown: 3
+2021-12-15 16:10:41.986 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 16:10:41.991 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 16:10:42.017 -05:00 [INF] Countdown: 2
+2021-12-15 16:10:42.058 -05:00 [INF] Countdown: 1
+2021-12-15 16:10:45.059 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 16:10:45.071 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 16:10:45.072 -05:00 [INF] Countdown: live!
+2021-12-15 16:12:34.214 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 16:17:24.717 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 16:17:26.461 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 16:17:26.564 -05:00 [INF] CountDown: 3
+2021-12-15 16:17:26.565 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 16:17:26.564 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 16:17:26.581 -05:00 [INF] Countdown: 2
+2021-12-15 16:17:26.623 -05:00 [INF] Countdown: 1
+2021-12-15 16:17:29.666 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 16:17:29.666 -05:00 [INF] Countdown: live!
+2021-12-15 16:17:29.690 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 17:12:54.010 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 17:12:56.279 -05:00 [INF] CountDown: 3
+2021-12-15 17:12:56.281 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 17:12:56.289 -05:00 [INF] Countdown: 2
+2021-12-15 17:12:56.281 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 17:12:56.309 -05:00 [INF] Countdown: 1
+2021-12-15 17:12:56.326 -05:00 [INF] Countdown: live!
+2021-12-15 17:16:01.768 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 17:16:01.785 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 17:16:01.822 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 17:16:01.823 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 17:16:01.826 -05:00 [INF] Disposable: executing
+2021-12-15 17:16:01.823 -05:00 [INF] SOMETHING WENT WRONG
+2021-12-15 17:16:01.854 -05:00 [INF] Disposable: disposed
+2021-12-15 17:20:34.895 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 17:20:36.355 -05:00 [INF] CountDown: 3
+2021-12-15 17:20:36.364 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 17:20:36.364 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 17:20:38.698 -05:00 [INF] Countdown: 2
+2021-12-15 17:20:38.698 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 17:20:38.713 -05:00 [INF] Countdown: 1
+2021-12-15 17:20:38.713 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 17:20:38.757 -05:00 [INF] Countdown: live!
+2021-12-15 17:32:07.344 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 17:36:12.245 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 17:36:13.729 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 17:36:13.742 -05:00 [INF] CountDown: 3
+2021-12-15 17:36:13.742 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 17:36:13.764 -05:00 [INF] Countdown: 2
+2021-12-15 17:36:13.784 -05:00 [INF] Countdown: 1
+2021-12-15 17:36:16.447 -05:00 [INF] Countdown: live!
+2021-12-15 17:36:16.447 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 17:36:16.473 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:11:29.759 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 22:11:31.433 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:15:31.372 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 22:15:32.621 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:15:32.624 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 22:15:32.668 -05:00 [INF] CountDown: 3
+2021-12-15 22:15:37.391 -05:00 [INF] Countdown: 2
+2021-12-15 22:15:37.400 -05:00 [INF] Countdown: 1
+2021-12-15 22:15:37.451 -05:00 [INF] Countdown: live!
+2021-12-15 22:15:37.467 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 22:15:37.468 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:15:37.750 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 22:15:37.754 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 22:15:37.755 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 22:15:37.756 -05:00 [INF] Hosting environment: Development
+2021-12-15 22:15:37.757 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 22:15:38.601 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 22:15:38.684 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:15:38.699 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 22:15:38.844 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:15:38.853 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7408ms.
+2021-12-15 22:15:38.899 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 22:15:40.571 -05:00 [INF] Executed DbCommand (159ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[job_id] AS [JobId], [j].[job_title] AS [JobTitle]
+FROM [hr].[Jobs] AS [j]
+2021-12-15 22:15:42.596 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 22:15:42.615 -05:00 [INF] Disposable: executing
+2021-12-15 22:15:42.624 -05:00 [INF] Disposable: disposed
+2021-12-15 22:15:55.352 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 22:15:56.403 -05:00 [INF] Executed ViewResult - view Index executed in 17538.7093ms.
+2021-12-15 22:15:56.410 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 17705.5468ms
+2021-12-15 22:15:56.414 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:15:56.473 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 17914.0296ms
+2021-12-15 22:15:56.723 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 22:15:56.724 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 22:15:56.729 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:15:56.734 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 9.6099ms
+2021-12-15 22:15:56.735 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 22:15:56.795 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:15:56.807 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 7.6956ms.
+2021-12-15 22:15:56.849 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 22:15:56.857 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 86.713ms
+2021-12-15 22:15:56.860 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:15:56.881 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 158.1386ms
+2021-12-15 22:16:32.593 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:16:38.177 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:17:32.601 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:17:32.626 -05:00 [INF] SOMETHING WENT WRONG
+2021-12-15 22:17:38.739 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:19:24.193 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 22:19:25.381 -05:00 [INF] CountDown: 3
+2021-12-15 22:19:25.381 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 22:19:25.404 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:19:25.409 -05:00 [INF] Countdown: 2
+2021-12-15 22:19:28.499 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 22:19:28.525 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:19:28.526 -05:00 [INF] Countdown: 1
+2021-12-15 22:19:28.556 -05:00 [INF] Countdown: live!
+2021-12-15 22:19:28.749 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 22:19:28.753 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 22:19:28.756 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 22:19:28.757 -05:00 [INF] Hosting environment: Development
+2021-12-15 22:19:28.758 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 22:19:29.678 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 22:19:29.696 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 22:19:29.774 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:19:29.793 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 22:19:29.916 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:19:29.928 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8269ms.
+2021-12-15 22:19:30.724 -05:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[job_id] AS [JobId], [j].[job_title] AS [JobTitle]
+FROM [hr].[Jobs] AS [j]
+2021-12-15 22:19:35.341 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 22:19:35.342 -05:00 [INF] Disposable: executing
+2021-12-15 22:19:35.347 -05:00 [INF] Disposable: disposed
+2021-12-15 22:19:35.552 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 22:19:36.526 -05:00 [INF] Executed ViewResult - view Index executed in 6585.6726ms.
+2021-12-15 22:19:36.540 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 6743.2735ms
+2021-12-15 22:19:36.545 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:19:36.591 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 6952.0049ms
+2021-12-15 22:19:36.834 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 22:19:36.840 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:19:36.844 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 22:19:36.912 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 22:19:36.919 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 74.8841ms
+2021-12-15 22:19:36.961 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:19:37.026 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 23.0798ms.
+2021-12-15 22:19:37.032 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 22:19:37.035 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 118.243ms
+2021-12-15 22:19:37.057 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:19:37.059 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 224.7639ms
+2021-12-15 22:21:27.743 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 22:21:28.889 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:21:28.897 -05:00 [INF] CountDown: 3
+2021-12-15 22:21:28.890 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 22:21:28.938 -05:00 [INF] Countdown: 2
+2021-12-15 22:21:32.489 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:21:32.497 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 22:21:32.497 -05:00 [INF] Countdown: 1
+2021-12-15 22:21:32.551 -05:00 [INF] Countdown: live!
+2021-12-15 22:21:32.628 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 22:21:32.633 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 22:21:32.635 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 22:21:32.636 -05:00 [INF] Hosting environment: Development
+2021-12-15 22:21:32.637 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 22:21:33.655 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 22:21:33.750 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:21:33.822 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 22:21:34.108 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:21:34.118 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.6227ms.
+2021-12-15 22:21:38.875 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 22:21:38.876 -05:00 [INF] Disposable: executing
+2021-12-15 22:21:38.886 -05:00 [INF] Disposable: disposed
+2021-12-15 22:21:39.247 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 22:21:40.449 -05:00 [INF] Executed ViewResult - view Index executed in 6322.965ms.
+2021-12-15 22:21:40.459 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 6633.8104ms
+2021-12-15 22:21:40.463 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:21:40.491 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 6850.8534ms
+2021-12-15 22:21:40.510 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 22:21:40.510 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 22:21:40.516 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:21:40.522 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 22:21:40.526 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 15.5894ms
+2021-12-15 22:21:40.571 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:21:40.586 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 5.4907ms.
+2021-12-15 22:21:40.596 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 22:21:40.599 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 66.4056ms
+2021-12-15 22:21:40.601 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:21:40.604 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 93.8705ms
+2021-12-15 22:22:28.859 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:22:32.975 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:23:28.906 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:23:28.914 -05:00 [INF] SOMETHING WENT WRONG
+2021-12-15 22:23:29.563 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 22:23:30.280 -05:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[job_id] AS [JobId], [j].[job_title] AS [JobTitle]
+FROM [hr].[Jobs] AS [j]
+2021-12-15 22:23:33.525 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:24:28.816 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/country - -
+2021-12-15 22:24:28.823 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.CountryController.Index (Second.WebUI)'
+2021-12-15 22:24:28.826 -05:00 [INF] Route matched with {action = "Index", controller = "Country"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.CountryController (Second.WebUI).
+2021-12-15 22:24:28.834 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 22:24:28.898 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:24:28.898 -05:00 [INF] Executing action method Second.WebUI.Controllers.CountryController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:24:29.070 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[country_id], [c].[country_name], [c].[region_id]
+FROM [hr].[Countries] AS [c]
+2021-12-15 22:24:29.436 -05:00 [INF] Executed action method Second.WebUI.Controllers.CountryController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 529.2011ms.
+2021-12-15 22:24:29.773 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 22:24:29.800 -05:00 [INF] Executed ViewResult - view Index executed in 356.4556ms.
+2021-12-15 22:24:29.802 -05:00 [INF] Executed action Second.WebUI.Controllers.CountryController.Index (Second.WebUI) in 973.0498ms
+2021-12-15 22:24:29.823 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.CountryController.Index (Second.WebUI)'
+2021-12-15 22:24:29.858 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/country - - - 200 - text/html;+charset=utf-8 1041.9125ms
+2021-12-15 22:24:29.919 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 22:24:29.919 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 22:24:29.922 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:24:29.926 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 6.0496ms
+2021-12-15 22:24:29.928 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 22:24:30.041 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:24:30.062 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 1.2274ms.
+2021-12-15 22:24:30.065 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 22:24:30.067 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 50.8867ms
+2021-12-15 22:24:30.076 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:24:30.079 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 159.6246ms
+2021-12-15 22:24:34.074 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:24:48.865 -05:00 [INF] Disable: disabled Reentrant and NonReentrant jobs
+2021-12-15 22:25:28.929 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 22:25:28.965 -05:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[job_id] AS [JobId], [j].[job_title] AS [JobTitle]
+FROM [hr].[Jobs] AS [j]
+2021-12-15 22:30:49.657 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-12-15 22:30:50.798 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:30:50.798 -05:00 [INF] Faulty: throwing an exception
+2021-12-15 22:30:50.798 -05:00 [INF] CountDown: 3
+2021-12-15 22:30:50.839 -05:00 [INF] Countdown: 2
+2021-12-15 22:30:54.170 -05:00 [INF] Countdown: 1
+2021-12-15 22:30:54.172 -05:00 [INF] HalfSecond: half a second has passed
+2021-12-15 22:30:54.196 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:30:54.206 -05:00 [INF] Countdown: live!
+2021-12-15 22:30:54.295 -05:00 [INF] Now listening on: https://localhost:5001
+2021-12-15 22:30:54.299 -05:00 [INF] Now listening on: http://localhost:5000
+2021-12-15 22:30:54.301 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-12-15 22:30:54.302 -05:00 [INF] Hosting environment: Development
+2021-12-15 22:30:54.303 -05:00 [INF] Content root path: C:\Users\bhzhe\Project_DotNetCore\DotNetCore_Second\Second.WebUI
+2021-12-15 22:30:55.496 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/ - -
+2021-12-15 22:30:55.605 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:30:55.680 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Second.WebUI.Controllers.HomeController (Second.WebUI).
+2021-12-15 22:30:55.985 -05:00 [INF] Executing action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:30:55.995 -05:00 [INF] Executed action method Second.WebUI.Controllers.HomeController.Index (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7228ms.
+2021-12-15 22:31:00.655 -05:00 [INF] Executing ViewResult, running view Index.
+2021-12-15 22:31:00.793 -05:00 [INF] Parameter: executed with parameter "Foo"
+2021-12-15 22:31:00.793 -05:00 [INF] Disposable: executing
+2021-12-15 22:31:00.797 -05:00 [INF] Disposable: disposed
+2021-12-15 22:31:01.642 -05:00 [INF] Executed ViewResult - view Index executed in 5636.9082ms.
+2021-12-15 22:31:01.652 -05:00 [INF] Executed action Second.WebUI.Controllers.HomeController.Index (Second.WebUI) in 5969.4709ms
+2021-12-15 22:31:01.659 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.HomeController.Index (Second.WebUI)'
+2021-12-15 22:31:01.696 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/ - - - 200 - text/html;+charset=utf-8 6281.6562ms
+2021-12-15 22:31:01.953 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2021-12-15 22:31:01.953 -05:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Constant/GetConstants - -
+2021-12-15 22:31:01.962 -05:00 [INF] Executing endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:31:01.962 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 11946 application/javascript;+charset=utf-8 9.1545ms
+2021-12-15 22:31:01.968 -05:00 [INF] Route matched with {action = "GetConstants", controller = "Constant"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetConstants() on controller Second.WebUI.Controllers.ConstantController (Second.WebUI).
+2021-12-15 22:31:02.036 -05:00 [INF] Executing action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) - Validation state: "Valid"
+2021-12-15 22:31:02.046 -05:00 [INF] Executed action method Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI), returned result Microsoft.AspNetCore.Mvc.ContentResult in 5.7662ms.
+2021-12-15 22:31:02.053 -05:00 [INF] Executing ContentResult with HTTP Response ContentType of text/javascript
+2021-12-15 22:31:02.081 -05:00 [INF] Executed action Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI) in 80.4308ms
+2021-12-15 22:31:02.083 -05:00 [INF] Executed endpoint 'Second.WebUI.Controllers.ConstantController.GetConstants (Second.WebUI)'
+2021-12-15 22:31:02.084 -05:00 [INF] Request finished HTTP/2 GET https://localhost:5001/Constant/GetConstants - - - 200 53 text/javascript 131.1527ms
+2021-12-15 22:31:50.769 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:31:54.729 -05:00 [INF] NonReentrant: sleeping a minute
+2021-12-15 22:32:50.776 -05:00 [INF] Reentrant: sleeping a minute
+2021-12-15 22:32:50.799 -05:00 [INF] SOMETHING WENT WRONG
+2021-12-15 22:32:51.382 -05:00 [INF] Entity Framework Core 6.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.1' with options: None
+2021-12-15 22:32:52.057 -05:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [j].[job_id] AS [JobId], [j].[job_title] AS [JobTitle]
+FROM [hr].[Jobs] AS [j]
+2021-12-15 22:32:52.100 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.114 -05:00 [INF] Finished job
+2021-12-15 22:32:52.116 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.139 -05:00 [INF] Finished job
+2021-12-15 22:32:52.143 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.162 -05:00 [INF] Finished job
+2021-12-15 22:32:52.171 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.192 -05:00 [INF] Finished job
+2021-12-15 22:32:52.197 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.218 -05:00 [INF] Finished job
+2021-12-15 22:32:52.237 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.253 -05:00 [INF] Finished job
+2021-12-15 22:32:52.255 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.257 -05:00 [INF] Finished job
+2021-12-15 22:32:52.262 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.278 -05:00 [INF] Finished job
+2021-12-15 22:32:52.283 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.303 -05:00 [INF] Finished job
+2021-12-15 22:32:52.316 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.318 -05:00 [INF] Finished job
+2021-12-15 22:32:52.319 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.321 -05:00 [INF] Finished job
+2021-12-15 22:32:52.326 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.345 -05:00 [INF] Finished job
+2021-12-15 22:32:52.368 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.392 -05:00 [INF] Finished job
+2021-12-15 22:32:52.396 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.419 -05:00 [INF] Finished job
+2021-12-15 22:32:52.424 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.441 -05:00 [INF] Finished job
+2021-12-15 22:32:52.459 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.460 -05:00 [INF] Finished job
+2021-12-15 22:32:52.465 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.484 -05:00 [INF] Finished job
+2021-12-15 22:32:52.488 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.501 -05:00 [INF] Finished job
+2021-12-15 22:32:52.506 -05:00 [INF] Beginning job
+2021-12-15 22:32:52.508 -05:00 [INF] Finished job
+2021-12-15 22:32:55.310 -05:00 [INF] NonReentrant: sleeping a minute

@@ -50,6 +50,7 @@ namespace ConsoleApp_Thread
             {
                 Console.WriteLine(Thread.CurrentThread.Name + "--" + i);
             }
+            Thread.Sleep(1000);
 
             Console.WriteLine("Hello World!");
         }

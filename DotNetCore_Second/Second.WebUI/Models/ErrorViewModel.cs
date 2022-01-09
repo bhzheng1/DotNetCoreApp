@@ -1,5 +1,3 @@
-using System;
-
 namespace Second.WebUI.Models
 {
     public class ErrorViewModel

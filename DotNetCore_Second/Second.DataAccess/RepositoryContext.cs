@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Second.DataAccess.ApplicationDb;
 
 namespace Second.DataAccess
 {

@@ -1,13 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+﻿using IronPdf;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Second.Model;
 using Second.WebUI.Utils;
-using System.Text.RegularExpressions;
-using IronPdf;
-using Microsoft.AspNetCore.Hosting;
 using System.IO;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace Second.WebUI.Controllers
 {
@@ -15,7 +15,7 @@ namespace Second.WebUI.Controllers
     {
         private IViewRenderService _viewService;
         private IWebHostEnvironment _env;
-        public PdfController(IViewRenderService viewService,IWebHostEnvironment env)
+        public PdfController(IViewRenderService viewService, IWebHostEnvironment env)
         {
             _viewService = viewService;
             _env = env;
@@ -26,17 +26,18 @@ namespace Second.WebUI.Controllers
             return View(model);
         }
 
-        public async Task<FileResult> ExportPdf(string strModel) {
+        public async Task<FileResult> ExportPdf(string strModel)
+        {
             var view = "Pdf/PdfFile";
             var model = JsonSerializer.Deserialize<PdfModel>(strModel);
-            var html = await _viewService.RenderToStringAsync(view,model);
-            
-            var cssFile = Path.Combine(_env.WebRootPath,"css");
+            var html = await _viewService.RenderToStringAsync(view, model);
+
+            var cssFile = Path.Combine(_env.WebRootPath, "css");
             cssFile = Path.Combine(cssFile, "site.css");
             var sitecss = System.IO.File.ReadAllText(cssFile);
 
             var re = new Regex(@"<script[^>]*>[\s\S]*?</script>");
-            html = re.Replace(html,"");
+            html = re.Replace(html, "");
             var sb = new StringBuilder("");
             sb.Append("<style>");
             sb.Append(sitecss);

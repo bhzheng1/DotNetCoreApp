@@ -2,7 +2,8 @@
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Second.DataAccess.Entities;
+using Microsoft.EntityFrameworkCore;
+using Second.DataAccess.ApplicationDb;
 
 namespace Second.DataAccess.Repositories
 {
@@ -23,14 +24,15 @@ namespace Second.DataAccess.Repositories
             var cd = await _repositoryContext.GetCommandDefinition(sb.ToString());
             return await _repositoryContext.QueryAsync<Country>(cd);
         }
+        public async Task<IEnumerable<Country>> GetCountriesAsync()
+        {
+            return await _context.Countries.ToListAsync();
+        }
 
         public IList<Country> GetCountries()
         {
             var result = _context.Countries.ToList();
             return result;
         }
-
-
-
     }
 }
