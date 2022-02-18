@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Filters>
+	<AdvanceFilters>
+		<filter name="fy">
+			<displayName>Fiscal Year</displayName>
+			<sql>fy in {0}</sql>
+			<showTextSearch>True</showTextSearch>
+			<typeAheadEnabled>True</typeAheadEnabled>
+			<typeAheadsql>
+				select distinct ResearchApplicationFiscalYear from NPARS_Data.ResearchApplication
+				where ResearchApplicationFiscalYear is not null
+				order by ResearchApplicationFiscalYear desc
+			</typeAheadsql>
+			<portfolioSearch>false</portfolioSearch>
+			<portfoliovalue>
+			</portfoliovalue>
+			<portfolioSql />
+			<budgetpoolSearch>false</budgetpoolSearch>
+			<sortBy>False</sortBy>
+			<sortPriority>
+			</sortPriority>
+			<sortDirection>
+			</sortDirection>
+			<reportSortBy>
+			</reportSortBy>
+			<unpaidReportSortBy>
+			</unpaidReportSortBy>
+			<eoyRankSortBy></eoyRankSortBy>
+			<beyondPaylineSortBy></beyondPaylineSortBy>
+			<earlycouncilSortBy></earlycouncilSortBy>
+			<protocolFundingSortBy></protocolFundingSortBy>
+		</filter>
+	</AdvanceFilters>
+	<Tabs>
+		<tab name="OF">
+			<displayname>Office Portfolio</displayname>
+			<displayvalue>OF</displayvalue>
+			<dbname>AwardTypeID</dbname>
+			<dbvalue>99</dbvalue>
+			<sql>
+			</sql>
+			<sortOrder>1</sortOrder>
+		</tab>
+	</Tabs>
+</Filters>

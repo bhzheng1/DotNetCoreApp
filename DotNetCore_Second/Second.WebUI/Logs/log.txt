@@ -487,3 +487,6 @@ FROM [hr].[Jobs] AS [j]
 2021-12-15 22:32:52.506 -05:00 [INF] Beginning job
 2021-12-15 22:32:52.508 -05:00 [INF] Finished job
 2021-12-15 22:32:55.310 -05:00 [INF] NonReentrant: sleeping a minute
+2022-01-10 00:46:29.251 -05:00 [INF] User profile is available. Using 'C:\Users\bhzhe\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-01-10 00:46:31.837 -05:00 [INF] Faulty: throwing an exception
+2022-01-10 00:46:31.850 -05:00 [INF] CountDown: 3

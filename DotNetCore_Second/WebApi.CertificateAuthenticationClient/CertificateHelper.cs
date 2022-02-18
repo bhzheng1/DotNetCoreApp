@@ -1,18 +1,20 @@
 ﻿using System.Security.Cryptography.X509Certificates;
+using Microsoft.Extensions.Configuration;
 
-namespace WebApi.CertificateAuthentication
+namespace WebApi.CertificateAuthenticationClient
 {
     //TODO
     public class CertificateHelper
     {
-        protected internal static X509Certificate2 GetServiceCertificate(string serialNumber,string env)
+        protected internal static X509Certificate2 GetServiceCertificate(string subjectName, string env)
         {
-            if (env == "Local") {
+            if (env == "Local")
+            {
                 using (var certStore = new X509Store(StoreName.My, StoreLocation.CurrentUser))
                 {
                     certStore.Open(OpenFlags.ReadOnly);
                     var certCollection = certStore.Certificates.Find(
-                                               X509FindType.FindBySerialNumber, serialNumber, true);
+                                               X509FindType.FindBySubjectDistinguishedName, subjectName, true);
                     X509Certificate2 certificate = null;
                     if (certCollection.Count > 0)
                     {
@@ -27,7 +29,7 @@ namespace WebApi.CertificateAuthentication
                 {
                     certStore.Open(OpenFlags.ReadOnly);
                     var certCollection = certStore.Certificates.Find(
-                                               X509FindType.FindBySerialNumber, serialNumber, true);
+                                               X509FindType.FindBySubjectDistinguishedName, subjectName, true);
                     X509Certificate2 certificate = null;
                     if (certCollection.Count > 0)
                     {
@@ -46,10 +48,5 @@ namespace WebApi.CertificateAuthentication
             var configuration = builder.Build();
             return configuration["ServerCertificateSubject"];
         }
-    }
-    public class CertConfig {
-        public const string Name = "CertConfig";
-        public string CertEnv { get; set; } = string.Empty;
-        public string CertSerialValue { get; set; } = string.Empty;
     }
 }

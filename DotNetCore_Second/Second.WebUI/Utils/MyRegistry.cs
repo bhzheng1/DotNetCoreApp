@@ -64,7 +64,6 @@ namespace Second.WebUI.Utils
             Day();
             Weekday();
             Week();
-            _logger = logger;
         }
 
         private void Welcome()

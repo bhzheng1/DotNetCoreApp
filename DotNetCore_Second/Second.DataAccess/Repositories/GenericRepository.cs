@@ -14,9 +14,9 @@ namespace Second.DataAccess.Repositories
             _context = context;
             table = _context.Set<T>();
         }
-        public GenericRepository(DbConfiguration config)
+        public GenericRepository(string applicationDbConn)
         {
-            _context = new ApplicationDbContext(SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder<ApplicationDbContext>(),config.ApplicationDbConn).UseLazyLoadingProxies().Options);
+            _context = new ApplicationDbContext(SqlServerDbContextOptionsExtensions.UseSqlServer(new DbContextOptionsBuilder<ApplicationDbContext>(), applicationDbConn).UseLazyLoadingProxies().Options);
             table = _context.Set<T>();
         }
         public IEnumerable<T> GetAll()

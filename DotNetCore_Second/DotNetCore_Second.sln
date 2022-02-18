@@ -21,8 +21,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.BasicAuthenticationC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.ApiKeyAuthenticationClient", "WebApi.ApiKeyAuthenticationClient\WebApi.ApiKeyAuthenticationClient.csproj", "{E3195629-98C3-40E9-962C-AF3F86AE7C2A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.CertificateAuthentication", "WebApi.CertificateAuthentication\WebApi.CertificateAuthentication.csproj", "{7E666EDF-FD6D-4F78-B0D4-281462F7ABF0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RapidApiClient", "RapidApiClient\RapidApiClient.csproj", "{3DD0BF92-8B76-44BE-8CF0-CB7CB1FC9DA8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ_Receiver", "RabbitMQ_Receiver\RabbitMQ_Receiver.csproj", "{05350D02-F972-4507-B7DB-F4724E869178}"
@@ -44,7 +42,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Second.Scheduler", "Second.Scheduler\Second.Scheduler.csproj", "{B0425F27-9B81-4C52-8D6B-EA9BD266FD02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Second.Services", "Second.Services\Second.Services.csproj", "{53C279FE-9298-4349-936C-168A9B28CB9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Second.Services", "Second.Services\Second.Services.csproj", "{53C279FE-9298-4349-936C-168A9B28CB9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.CertificateAuthentication", "WebApi.CertificateAuthentication\WebApi.CertificateAuthentication.csproj", "{D287D9AA-0C03-46E0-B5C3-9791539304BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.CertificateAuthenticationClient", "WebApi.CertificateAuthenticationClient\WebApi.CertificateAuthenticationClient.csproj", "{C07AFA5B-4CE9-4AB6-B196-5AB5688BF379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,10 +90,6 @@ Global
 		{E3195629-98C3-40E9-962C-AF3F86AE7C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3195629-98C3-40E9-962C-AF3F86AE7C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3195629-98C3-40E9-962C-AF3F86AE7C2A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E666EDF-FD6D-4F78-B0D4-281462F7ABF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E666EDF-FD6D-4F78-B0D4-281462F7ABF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E666EDF-FD6D-4F78-B0D4-281462F7ABF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E666EDF-FD6D-4F78-B0D4-281462F7ABF0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3DD0BF92-8B76-44BE-8CF0-CB7CB1FC9DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3DD0BF92-8B76-44BE-8CF0-CB7CB1FC9DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DD0BF92-8B76-44BE-8CF0-CB7CB1FC9DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -124,6 +122,14 @@ Global
 		{53C279FE-9298-4349-936C-168A9B28CB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53C279FE-9298-4349-936C-168A9B28CB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53C279FE-9298-4349-936C-168A9B28CB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D287D9AA-0C03-46E0-B5C3-9791539304BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D287D9AA-0C03-46E0-B5C3-9791539304BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D287D9AA-0C03-46E0-B5C3-9791539304BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D287D9AA-0C03-46E0-B5C3-9791539304BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C07AFA5B-4CE9-4AB6-B196-5AB5688BF379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07AFA5B-4CE9-4AB6-B196-5AB5688BF379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07AFA5B-4CE9-4AB6-B196-5AB5688BF379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07AFA5B-4CE9-4AB6-B196-5AB5688BF379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
