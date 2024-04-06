@@ -1,0 +1,15 @@
+# use dotnet sdk image to run the aspnet application directly in container
+# Could dynamically watch files changes to avoid recreating the container
+version: "3.9"
+services:
+    app:
+        image: mcr.microsoft.com/dotnet/sdk:8.0
+        volumes:
+            - ./:/app
+        environment:
+            - ASPNETCORE_HTTP_PORTS=80
+            - ASPNETCORE_URLS=http://+:80 # for aspnet images
+            - DOTNET_URLS=http://+:80 # for sdk images
+        ports:
+            - "8080:80"
+        entrypoint: ["sleep", "3600"]

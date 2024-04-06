@@ -1,8 +1,0 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <AssemblyVersion>2021.5.27.27</AssemblyVersion>
-  </PropertyGroup>
-
-</Project>

@@ -1,0 +1,18 @@
+@WebApi_GraphQL_HostAddress = http://localhost:5188
+
+GET {{WebApi_GraphQL_HostAddress}}/weatherforecast/getWeatherForecast
+Accept: application/json
+###
+
+GET {{WebApi_GraphQL_HostAddress}}/graphql?query={employee(id:2){id,name,deptName}}
+Accept: application/json
+###
+
+POST {{WebApi_GraphQL_HostAddress}}/graphql
+Content-Type: application/json
+Accept: application/json
+
+{
+    "query": "{employee(id:2){id,name,deptName}}"
+}
+###
