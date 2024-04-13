@@ -5,9 +5,9 @@ using Module_WorldDemo.DataAccess;
 
 namespace Module_WorldDemo;
 
-public static partial class WebApplicationExtensions
+public static partial class WebApplicationExtension
 {
-    public static async Task EnsureDatabaseUpdated(this IHost app)
+    public static async Task EnsureModuleDatabaseUpdated(this IHost app)
     {
         using (var scope = app.Services.CreateScope())
         {

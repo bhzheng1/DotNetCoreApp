@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ClassLibrary_DataAccess.Entities;
+namespace Module_WorldDemo.Entities;
 public class Company
 {
     [Key]

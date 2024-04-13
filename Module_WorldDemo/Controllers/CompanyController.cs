@@ -1,8 +1,8 @@
-using ClassLibrary_DataAccess.DataAccess;
-using ClassLibrary_DataAccess.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Module_WorldDemo.DataAccess;
+using Module_WorldDemo.Entities;
 
-namespace ClassLibrary_DataAccess.Controllers;
+namespace Module_WorldDemo.Controllers;
 
 [ApiController]
 [Route("api/dataAccess/[controller]")]

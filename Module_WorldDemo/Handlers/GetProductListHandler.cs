@@ -1,6 +1,6 @@
-using ClassLibrary_DataAccess.DataAccess;
 using ClassLibrary_DataAccess.Queries;
 using MediatR;
+using Module_WorldDemo.DataAccess;
 
 namespace ClassLibrary_DataAccess.Handlers;
 public class GetProductListHandler : IRequestHandler<GetProductListQuery, GetProductListQueryResponse>

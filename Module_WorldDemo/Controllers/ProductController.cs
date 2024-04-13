@@ -1,9 +1,8 @@
-using ClassLibrary_DataAccess.DataAccess;
 using ClassLibrary_DataAccess.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ClassLibrary_DataAccess.Controllers;
+namespace Module_WorldDemo.Controllers;
 
 [ApiController]
 [Route("api/dataAccess/[controller]")]

@@ -1,6 +1,6 @@
-using ClassLibrary_DataAccess.Entities;
+using Module_WorldDemo.Entities;
 
-namespace ClassLibrary_DataAccess.DataAccess;
+namespace Module_WorldDemo.DataAccess;
 
 public interface ICompanyRepository
 {

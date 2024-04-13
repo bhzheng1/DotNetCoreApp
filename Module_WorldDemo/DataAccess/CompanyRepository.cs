@@ -1,12 +1,12 @@
-using ClassLibrary_DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
+using Module_WorldDemo.Entities;
 
-namespace ClassLibrary_DataAccess.DataAccess;
+namespace Module_WorldDemo.DataAccess;
 
 public class CompanyRepository : ICompanyRepository
 {
-    private readonly ClDataBaseContext _context;
-    public CompanyRepository(ClDataBaseContext context)
+    private readonly WorldDataBaseContext _context;
+    public CompanyRepository(WorldDataBaseContext context)
     {
         _context = context;
     }

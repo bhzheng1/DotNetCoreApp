@@ -1,11 +1,11 @@
-using ClassLibrary_DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
+using Module_WorldDemo.Entities;
 
-namespace ClassLibrary_DataAccess.DataAccess;
+namespace Module_WorldDemo.DataAccess;
 public class ProductRepository : IProductRepository
 {
-    private readonly ClDataBaseContext _context;
-    public ProductRepository(ClDataBaseContext context)
+    private readonly WorldDataBaseContext _context;
+    public ProductRepository(WorldDataBaseContext context)
     {
         _context = context;
     }
