@@ -9,20 +9,21 @@ using System.Text.Json;
 using WebApi_Application.DataAccess;
 using WebApi_Application.Extensions;
 using WebApi_Application.Models;
-using ClassLibrary_DataAccess;
-using ClassLibrary_MediatRDemo;
+using Module_WorldDemo;
+using MediatRDemo;
 
 var builder = WebApplication.CreateBuilder(args);
 
 /*
-Setting Host environment variable overrides
+Setting Host environment variable to override values in your appsettings.json
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-8.0
 
-To replace values in your appsettings your must follow these rules:
 Prefix your env var with ASPNETCORE_
 Use double underscore to separate nested fields __
 So to set the WorldDataBase in our ConnectionStrings section we would run or build the application with the variable:
 ASPNETCORE_ConnectionStrings__WorldDataBase=my-string
 */
+
 builder.Configuration.AddEnvironmentVariables();
 
 foreach (var c in builder.Configuration.AsEnumerable())
@@ -31,6 +32,10 @@ foreach (var c in builder.Configuration.AsEnumerable())
 }
 
 ConfigurationManager configuration = builder.Configuration;
+
+
+#region Logger configuration
+
 var logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
@@ -43,18 +48,24 @@ var logger = new LoggerConfiguration()
 // use serilog as the only logging provider
 builder.Host.UseSerilog(logger);
 
-var connectionStr = configuration.GetConnectionString("WorldDataBase");
+#endregion
 
-// Add services to the container.
-
+#region Microsoft sql server
+var appDatabaseStr = configuration.GetConnectionString("AppDataBase");
 // For sql server database
-// builder.Services.AddDataBaseAccess(opts => opts.UseSqlServer(connectionStr));
-builder.Services.AddDataBaseAccess(opts => opts.UseInMemoryDatabase("test"));
+builder.Services.AddDataBaseAccess(opts => opts.UseSqlServer(appDatabaseStr));
+
+// For InMemoryDatabase
+//builder.Services.AddDataBaseAccess(opts => opts.UseInMemoryDatabase("test"));
 
 //for identity
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<WorldDataBaseContext>()
+                .AddEntityFrameworkStores<AppDataBaseContext>()
                 .AddDefaultTokenProviders();
+#endregion
+
+
+
 
 // Adding Authentication
 builder.Services.AddOptions<EmailOptions>().Bind(configuration.GetSection(EmailOptions.EmailConfig));
@@ -86,11 +97,19 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// add data access module
+
+
+#region mudule sample: Module_WorldDemo
+
+var connectionStr = configuration.GetConnectionString("WorldDataBase");
 // will automatically add the controllers and services
-//builder.Services.AddClDataBaseAccess(opts => opts.UseSqlServer(connectionStr));
-builder.Services.AddClDataBaseAccess(opts => opts.UseInMemoryDatabase("WorldDataBase"));
-builder.Services.AddDataAccessModuleDI();
+builder.Services.AddWorldDataBaseAccess(opts => opts.UseNpgsql(connectionStr));
+//builder.Services.AddClDataBaseAccess(opts => opts.UseInMemoryDatabase("WorldDataBase"));
+builder.Services.AddWorldModuleDependencies();
+
+#endregion
+// add data access module
+
 
 // add the mediatR module
 builder.Services.AddMediatRModuleDI();
@@ -173,11 +192,12 @@ else
 
 app.UseHsts();
 
-await app.AddAdminUser();
 
-// ensure database is created, otherwise the seed data won't be inserted in the in-memory database
-await app.EnsureDatabaseCreated();
+await app.EnsureAppDatabaseUpdated();
 
+# region mudule sample: Module_WorldDemo
+await app.EnsureModuleDatabaseUpdated();
+# endregion
 //
 app.UseSerilogRequestLogging();
 
