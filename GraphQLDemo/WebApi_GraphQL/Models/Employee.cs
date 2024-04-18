@@ -1,1 +1,0 @@
-public record Employee(int Id, string Name, int Age, int DeptId);
